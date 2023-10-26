@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="../styles/shoepage.css" />
+    <script src="../components/header.js" type="text/javascript" defer></script>
+    <script src="../components/footer.js" type="text/javascript" defer></script>
+    <script
+      src="../components/shoedescription.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+    </script>
+  </head>
+
+  <header-component></header-component>
+  <body onload="document.body.style.opacity='1'">
+    <div class="maincontainer">
+      <div class="container">
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="../resources/air-jordan-1.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="../resources/air-jordan-1.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="../resources/air-jordan-1.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="../resources/air-jordan-1.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="../resources/air-jordan-1.jpeg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="../resources/air-jordan-1.jpeg" style="width: 100%" />
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="../resources/air-jordan-1.jpeg"
+              style="width: 100%"
+              onclick="currentSlide(1)"
+              alt="The Woods"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="../resources/air-jordan-1.jpeg"
+              style="width: 100%"
+              onclick="currentSlide(2)"
+              alt="Cinque Terre"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="../resources/air-jordan-1.jpeg"
+              style="width: 100%"
+              onclick="currentSlide(3)"
+              alt="Mountains and fjords"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="../resources/air-jordan-1.jpeg"
+              style="width: 100%"
+              onclick="currentSlide(4)"
+              alt="Northern Lights"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="../resources/air-jordan-1.jpeg"
+              style="width: 100%"
+              onclick="currentSlide(5)"
+              alt="Nature and sunrise"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="../resources/air-jordan-1.jpeg"
+              style="width: 100%"
+              onclick="currentSlide(6)"
+              alt="Snowy Mountains"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <p>
+          The Air Jordan 1 Mid brings full-court style and premium comfort to an
+          iconic look. Its Air-Sole unit cushions play on the hardwood, while
+          the padded collar gives you a supportive feel. Shown: Sky J French
+          Blue/Sail/Ozone Blue Style: BQ6472-414 The Air Jordan 1 Mid brings
+          full-court style and premium comfort to an iconic look. Its Air-Sole
+          unit cushions play on the hardwood, while the padded collar gives you
+          a supportive feel. Shown: Sky J French Blue/Sail/Ozone Blue Style:
+          BQ6472-414 The Air Jordan 1 Mid brings full-court style and premium
+          comfort to an iconic look. Its Air-Sole unit cushions play on the
+          hardwood, while the padded collar gives you a supportive feel. Shown:
+          Sky J French Blue/Sail/Ozone Blue Style: BQ6472-414 The Air Jordan 1
+          Mid brings full-court style and premium comfort to an iconic look. Its
+          Air-Sole unit cushions play on the hardwood, while the padded collar
+          gives you a supportive feel. Shown: Sky J French Blue/Sail/Ozone Blue
+          Style: BQ6472-414 The Air Jordan 1 Mid brings full-court style and
+          premium comfort to an iconic look. Its Air-Sole unit cushions play on
+          the hardwood, while the padded collar gives you a supportive feel.
+          Shown: Sky J French Blue/Sail/Ozone Blue Style: BQ6472-414 The Air
+          Jordan 1 Mid brings full-court style and premium comfort to an iconic
+          look. Its Air-Sole unit cushions play on the hardwood, while the
+          padded collar gives you a supportive feel. Shown: Sky J French
+          Blue/Sail/Ozone Blue Style: BQ6472-414 The Air Jordan 1 Mid brings
+          full-court style and premium comfort to an iconic look. Its Air-Sole
+          unit cushions play on the hardwood, while the padded collar gives you
+          a supportive feel. Shown: Sky J French Blue/Sail/Ozone Blue Style:
+          BQ6472-414 The Air Jordan 1 Mid brings full-court style and premium
+          comfort to an iconic look. Its Air-Sole unit cushions play on the
+          hardwood, while the padded collar gives you a supportive feel. Shown:
+          Sky J French Blue/Sail/Ozone Blue Style: BQ6472-414 The Air Jordan 1
+          Mid brings full-court style and premium comfort to an iconic look. Its
+          Air-Sole unit cushions play on the hardwood, while the padded collar
+          gives you a supportive feel. Shown: Sky J French Blue/Sail/Ozone Blue
+          Style: BQ6472-414 The Air Jordan 1 Mid brings full-court style and
+          premium comfort to an iconic look. Its Air-Sole unit cushions play on
+          the hardwood, while the padded collar gives you a supportive feel.
+          Shown: Sky J French Blue/Sail/Ozone Blue Style: BQ6472-414 The Air
+          Jordan 1 Mid brings full-court style and premium comfort to an iconic
+          look. Its Air-Sole unit cushions play on the hardwood, while the
+          padded collar gives you a supportive feel. Shown: Sky J French
+          Blue/Sail/Ozone Blue Style: BQ6472-414 The Air Jordan 1 Mid brings
+          full-court style and premium comfort to an iconic look. Its Air-Sole
+          unit cushions play on the hardwood, while the padded collar gives you
+          a supportive feel. Shown: Sky J French Blue/Sail/Ozone Blue Style:
+          BQ6472-414 The Air Jordan 1 Mid brings full-court style and premium
+          comfort to an iconic look. Its Air-Sole unit cushions play on the
+          hardwood, while the padded collar gives you a supportive feel. Shown:
+          Sky J French Blue/Sail/Ozone Blue Style: BQ6472-414 The Air Jordan 1
+          Mid brings full-court style and premium comfort to an iconic look. Its
+          Air-Sole unit cushions play on the hardwood, while the padded collar
+          gives you a supportive feel. Shown: Sky J French Blue/Sail/Ozone Blue
+          Style: BQ6472-414 The Air Jordan 1 Mid brings full-court style and
+          premium comfort to an iconic look. Its Air-Sole unit cushions play on
+          the hardwood, while the padded collar gives you a supportive feel.
+          Shown: Sky J French Blue/Sail/Ozone Blue Style: BQ6472-414 The Air
+          Jordan 1 Mid brings full-court style and premium comfort to an iconic
+          look. Its Air-Sole unit cushions play on the hardwood, while the
+          padded collar gives you a supportive feel. Shown: Sky J French
+          Blue/Sail/Ozone Blue Style: BQ6472-414 The Air Jordan 1 Mid brings
+          full-court style and premium comfort to an iconic look. Its Air-Sole
+          unit cushions play on the hardwood, while the padded collar gives you
+          a supportive feel. Shown: Sky J French Blue/Sail/Ozone Blue Style:
+          BQ6472-414
+        </p>
+      </div>
+    </div>
+  </body>
+  <footer-component></footer-component>
+</html>
