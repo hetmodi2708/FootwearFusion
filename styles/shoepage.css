@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
   opacity: 0;
   transition: opacity 3s;
@@ -5,9 +9,6 @@ body {
 div {
   margin-right: 7em;
   margin-bottom: 2em;
-}
-* {
-  box-sizing: border-box;
 }
 img {
   vertical-align: middle;
@@ -71,20 +72,6 @@ img {
   top: 0;
 }
 
-/* .row:after {
-    content: "";
-    display: flex;
-    flex-direction: row;
-    clear: both;
-  }
-
-  /* Six columns side by side 
-  .column {
-    float: left;
-    width: 15%;
-    background-color: black;
-  } */
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -111,39 +98,66 @@ img {
 }
 
 @media (max-width: 480px) {
-  .column {
-    flex: 0 0 calc(100% - 20px); /* 100% width minus margins */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
   }
 
-  .grid-container {
-    width: 100%;
+  .column {
+    flex: 0 0 calc(33.33% - 20px); /* 33.33% width minus margins */
+    margin: 0 10px;
+  }
+
+  .cursor {
+    cursor: pointer;
   }
 
   .container {
-    width: 100%;
+    position: relative;
+    width: 80%;
+    height: 40%;
+    float: none;
+    margin: 0 auto;
+    background-color: chocolate;
   }
 
   .mySlides {
-    display: block;
+    display: none;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80%;
   }
 
   .prev,
   .next {
-    display: none;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .text-container {
-    float: left;
-    width: 35%;
+    width: 80%;
+    height: 60%;
+    clear: both;
     overflow: scroll;
     background-color: cadetblue;
   }
   .maincontainer {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    background-color: darkgreen;
-    height: auto;
-    /* height: 90vh; */
+    height: 100vh;
   }
 }
 /* Add a transparency effect for thumnbail images */
@@ -158,6 +172,6 @@ img {
 .maincontainer {
   display: flex;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   overflow: scroll;
 }

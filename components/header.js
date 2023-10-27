@@ -9,7 +9,7 @@ headerTemplate.innerHTML = `
         <ul>
           <li><button id="home" type="button">Home</button></li>
           <li><button id="nws" type="button">Newsletter</button></li>
-          <li><button type="button">About</button></li>
+          <li><button id="about" type="button">About</button></li>
         </ul>
       </nav>
     </div>
@@ -52,11 +52,15 @@ class Header extends HTMLElement {
 
     shadowRoot.appendChild(headerTemplate.content);
     const homebutton = shadowRoot.getElementById("home");
+    const aboutbutton = shadowRoot.getElementById("about");
     const modal = shadowRoot.getElementById("newsletter");
     const btn = shadowRoot.getElementById("nws");
     const closeBtn = shadowRoot.querySelector(".close");
     homebutton.onclick = function () {
       window.location.href = "../main/index.html";
+    };
+    aboutbutton.onclick = function () {
+      window.location.href = "../main/about.html";
     };
     btn.onclick = function () {
       console.log("Newsletter button clicked");
